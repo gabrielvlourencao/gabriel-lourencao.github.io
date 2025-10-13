@@ -99,7 +99,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     color: #fff;
     border-color: #fff; }
     .btn.btn-outline-black:hover {
-      border-color: #4ca966;
+      border-color: #0a0a0a;
       background: #fff;
       color: #000; }
   .btn.btn-secondary {
@@ -1069,7 +1069,7 @@ figure.dotted-bg {
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    background: #4ca966;
+    background: #161616;
     opacity: 0.5;
     bottom: -0px;
     right: -0px;
@@ -1153,7 +1153,7 @@ figure.dotted-bg {
   margin-top: 7rem; }
   #about-section .container {
     color: #fff;
-    background: #4ca966;
+    background: #282727;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 50px;
