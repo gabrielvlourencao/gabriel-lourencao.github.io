@@ -6,416 +6,1031 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="favicon.ico">
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="Gabriel Lourenção - Tech Lead e Desenvolvedor Full Stack especializado em .NET e Angular. Portfólio com projetos de portais corporativos, sistemas de gestão e soluções web modernas." />
+  <meta name="keywords" content="Gabriel Lourenção, Tech Lead, Full Stack Developer, .NET, Angular, C#, Azure, Desenvolvedor, Portfólio" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Mono&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>Gabriel Lourenção</title>
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --primary-dark: #1e40af;
+      --secondary-color: #64748b;
+      --accent-color: #0ea5e9;
+      --text-dark: #0f172a;
+      --text-light: #64748b;
+      --bg-light: #f8fafc;
+      --bg-white: #ffffff;
+      --border-color: #e2e8f0;
+      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+      background: var(--bg-white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-dark);
+    }
+
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-link {
+      color: var(--text-dark) !important;
+      font-weight: 500;
+      font-size: 15px;
+      padding: 0.5rem 1rem !important;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 80%;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 80px;
+      background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .hero-buttons .btn {
+      margin: 0;
+    }
+
+    .btn-primary-custom {
+      background: var(--primary-color);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-md);
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-primary-custom:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn-outline-custom {
+      background: transparent;
+      color: var(--primary-color);
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 2px solid var(--primary-color);
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-outline-custom:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-image img {
+      border-radius: 20px;
+      box-shadow: var(--shadow-xl);
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 4rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* About Section */
+    .about-section {
+      background: var(--bg-white);
+    }
+
+    .about-card {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    /* Portfolio Section */
+    .portfolio-section {
+      background: var(--bg-light);
+    }
+
+    .portfolio-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border-color);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .portfolio-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      background: var(--bg-light);
+    }
+
+    .portfolio-content {
+      padding: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .portfolio-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-dark);
+    }
+
+    .portfolio-description {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .portfolio-link {
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-link:hover {
+      gap: 1rem;
+      color: var(--primary-dark);
+    }
+
+    /* Skills Section */
+    .skills-section {
+      background: var(--bg-white);
+    }
+
+    .skill-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+      height: 100%;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-color);
+    }
+
+    .skill-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      border-radius: 12px;
+    }
+
+    .skill-icon img {
+      width: 40px;
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+
+    .skill-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .skill-description {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    /* Experience Section */
+    .experience-section {
+      background: var(--bg-light);
+    }
+
+    .experience-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+      height: 100%;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .experience-logo {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+    }
+
+    .experience-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+
+    .experience-role {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--text-dark);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer h3 {
+      color: white;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .footer-social a {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      background: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 60px 0;
+      }
+
+      .hero-section {
+        min-height: auto;
+        padding: 100px 0 60px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .about-card {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .portfolio-card,
+      .skill-card,
+      .experience-card {
+        margin-bottom: 2rem;
+      }
+
+      .portfolio-image {
+        height: 200px;
+      }
+
+      .portfolio-content {
+        padding: 1.5rem;
+      }
+
+      .portfolio-title {
+        font-size: 1.25rem;
+      }
+
+      .portfolio-description {
+        font-size: 0.9rem;
+      }
+
+      .skill-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .skill-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1rem;
+      }
+
+      .skill-icon img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .skill-title {
+        font-size: 1.1rem;
+      }
+
+      .skill-description {
+        font-size: 0.9rem;
+      }
+
+      .experience-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .experience-logo {
+        height: 150px;
+        margin-bottom: 1rem;
+      }
+
+      .experience-title {
+        font-size: 1.25rem;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem !important;
+        font-size: 14px;
+      }
+
+      .footer {
+        padding: 3rem 0 1.5rem;
+      }
+
+      .footer h3 {
+        font-size: 1.25rem;
+      }
+
+      .hero-image img {
+        margin-top: 2rem;
+        border-radius: 12px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-title {
+        font-size: 1.75rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .about-card {
+        padding: 1.5rem 1rem;
+      }
+
+      .portfolio-content,
+      .skill-card,
+      .experience-card {
+        padding: 1.5rem 1rem;
+      }
+
+      .portfolio-image {
+        height: 180px;
+      }
+
+      .btn-primary-custom,
+      .btn-outline-custom {
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+    }
+
+    /* Animations */
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+    }
+
+    [data-aos].aos-animate {
+      opacity: 1;
+    }
+  </style>
+
+  <title>Gabriel Lourenção - Tech Lead & Full Stack Developer</title>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
-
-  <div class="lines-wrap">
-    <div class="lines-inner">
-      <div class="lines"></div>
-    </div>
-  </div>
-  <!-- END lines -->
-
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close">
-        <span class="icofont-close js-menu-toggle"></span>
-      </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
-
-  <nav class="site-nav dark mb-5 site-navbar-target">
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <div class="site-navigation">
-        <ul class="js-clone-nav d-none d-lg-inline-none site-menu float-right site-nav-wrap">
-          <a href="#about-section" class="nav-link">Sobre mim</a>
-
-          <li><a href="#portfolio-section" class="nav-link active">Portfolio</a></li>
+      <a class="navbar-brand" href="#" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--text-dark);">
+        GL
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Sobre</a>
           </li>
-          <li><a href="#services-section" class="nav-link">Habilidades</a></li>
-          <li>
-          <li><a href="#home-section" class="nav-link active">Experiências</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
-
-          <li><a href="#footer-section" class="nav-link">Contatos</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experiências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contato</a>
+          </li>
         </ul>
-
-        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block"
-          data-toggle="collapse" data-target="#main-navbar">
-          <span></span>
-        </a>
-
       </div>
     </div>
   </nav>
 
-
-  <div class="untree_co-section pb-0" id="about-section">
+  <!-- Hero Section -->
+  <section class="hero-section">
     <div class="container">
-      <div class="row justify-content-center mb-3">
-        <div class="col-lg-7 mx-auto text-center author-wrap">
-          <img src="images/Gabriel.jpg" alt="Image" width="200" class="img-fluid rounded-circle mb-3">
-          <h3 class="text-white h5 font-weight-bold mb-2 gsap-reveal-hero">Gabriel Vinicius Lourenção</h3>
-          <p class="gsap-reveal-hero">Senior Software Engineer | Tech Lead</p>
+      <div class="row align-items-center">
+        <div class="col-lg-6 hero-content" data-aos="fade-right">
+          <h1 class="hero-title">Gabriel Lourenção</h1>
+          <p class="hero-subtitle">Tech Lead & Full Stack Developer</p>
+          <p class="hero-description">
+            Especializado em <strong>.NET e Angular</strong>, transformo ideias em soluções escaláveis e de alta performance. 
+            Lidero times técnicos e desenvolvo sistemas que fazem a diferença.
+          </p>
+          <div class="hero-buttons" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://www.linkedin.com/in/gabriel-louren%C3%A7%C3%A3o/" target="_blank" class="btn btn-primary-custom">
+              Conectar no LinkedIn
+            </a>
+            <a href="#portfolio" class="btn btn-outline-custom">
+              Ver Projetos
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
+          <img src="images/Gabriel.jpg" alt="Gabriel Lourenção" class="img-fluid">
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Sobre Mim</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Tech Lead e desenvolvedor Full Stack com paixão por criar soluções que impactam
+      </p>
+      
       <div class="row justify-content-center">
-        <div class="col-lg-7">
-
-          <p class="gsap-reveal-hero">
-            Olá! Sou o <strong>Gabriel Lourenção</strong>, <strong>Tech Lead e desenvolvedor Full Stack</strong> com
-            foco em <strong>.NET e Angular</strong>.
-            Tenho experiência na criação de soluções escaláveis, modernização de sistemas e liderança técnica de times
-            de desenvolvimento.
-          </p>
-
-          <p class="gsap-reveal-hero">
-            Atuo com <strong>C# / .NET, Angular e Azure</strong>, aplicando boas práticas de arquitetura e automação
-            para garantir
-            qualidade, performance e impacto real no negócio.
-          </p>
-
-          <p class="gsap-reveal-hero text-center">
-            <a href="https://www.linkedin.com/in/gabriel-louren%C3%A7%C3%A3o/" target="_blank"
-              class="btn btn-outline-black">
-              Fale comigo!
-            </a>
-          </p>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-  </div>
-
-  <div class="untree_co-section pb-0" id="portfolio-section">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-md-7">
-          <h1 class="heading gsap-reveal-hero mb-3"><strong>Portfolio<span class="text-primary"></h1>
-          <h2 class="subheading gsap-reveal-hero mb-4">
-            Alguns trabalhos independentes
-          </h2>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="untree_co-section untree_co-section-4 pb-0" id="portfolio-section">
-    <div class="container">
-
-
-      <div class="relative">
-        <div class="loader-portfolio-wrap">
-          <div class="loader-portfolio"></div>
-        </div>
-      </div>
-      <div id="portfolio-single-holder"></div>
-
-      <div class="portfolio-wrapper">
-
-        <div id="posts" class="row">
-
-          <div class="item web branding col-sm-4 col-md-4 col-lg-4 isotope-mb-2">
-            <a href="https://chocogi-admin.azurewebsites.net/" target="_blank"
-              class="portfolio-item isotope-item gsap-reveal-img" data-id="1">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Gestão de negocios - Neway</h3>
-                  <p>Portal de gestão de negocios</p>
-                </div>
+        <div class="col-lg-10">
+          <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="row">
+              <div class="col-md-6 mb-4 mb-md-0">
+                <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Minha Jornada</h3>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+                  Sou <strong>Gabriel Lourenção</strong>, Tech Lead e desenvolvedor Full Stack com foco em 
+                  <strong>.NET e Angular</strong>. Tenho experiência na criação de soluções escaláveis, 
+                  modernização de sistemas e liderança técnica de times de desenvolvimento.
+                </p>
+                <p style="color: var(--text-light);">
+                  Atuo com <strong>C# / .NET, Angular e Azure</strong>, aplicando boas práticas de arquitetura 
+                  e automação para garantir qualidade, performance e impacto real no negócio.
+                </p>
               </div>
-              <img src="images/NBManager.png" class="lazyload  img-fluid" alt="Images" />
-            </a>
-          </div>
-
-
-          <div class="item web branding col-sm-4 col-md-6 col-lg-4 isotope-mb-2">
-            <a href="https://bs-manager.com/" target="_blank"
-              class="portfolio-item isotope-item gsap-reveal-img" data-id="2">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>Gerador de orçamentos gratuito</h3>
-                  <p>Formulario simples para gerar orçamentos</p>
-                </div>
+              <div class="col-md-6">
+                <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Especializações</h3>
+                <ul style="list-style: none; padding: 0; color: var(--text-light);">
+                  <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--primary-color);">▸</span>
+                    Portais corporativos e institucionais
+                  </li>
+                  <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--primary-color);">▸</span>
+                    Sistemas de gestão de documentos
+                  </li>
+                  <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--primary-color);">▸</span>
+                    Ferramentas de automação e gestão
+                  </li>
+                  <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--primary-color);">▸</span>
+                    Arquitetura de software escalável
+                  </li>
+                  <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--primary-color);">▸</span>
+                    Liderança técnica e mentoria
+                  </li>
+                </ul>
               </div>
-              <img src="images/bs_logo.png" class="lazyload  img-fluid" alt="Images"/>
-            </a>
+            </div>
           </div>
-
-          <div class="item web branding col-sm-4 col-md-4 col-lg-4 isotope-mb-2">
-            <a href="https://github.com/gabrielvlourencao/ia_code_analysis_issues" target="_blank"
-              class="portfolio-item isotope-item gsap-reveal-img" data-id="2">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3>IA Code Review Issuer</h3>
-                  <p>Code review feito por IA</p>
-                </div>
-              </div>
-              <img src="images/gpt.png" class="lazyload  img-fluid" alt="Images" />
-            </a>
-          </div>
-
         </div>
       </div>
-
-
-      <!-- </div>
-        </div> -->
     </div>
-  </div>
+  </section>
 
-
-  <div class="untree_co-section pb-0" id="services-section">
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section portfolio-section">
     <div class="container">
-      <div class="row mb-4">
-        <div class="col-lg-7 text-center mx-auto">
-          <h2 class="section-heading gsap-reveal-hero mb-0"><strong>Habilidades</strong></h2>
-          <p class="gsap-reveal-hero">Alguns dos meus pontos fortes</p>
-          <div class="wave gsap-reveal-hero">
-          </div>
-        </div>
-      </div>
+      <h2 class="section-title" data-aos="fade-up">Portfolio</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Projetos e soluções desenvolvidas com foco em qualidade e impacto
+      </p>
 
       <div class="row">
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="images/svg/service-icon-5.svg" alt="Image" class="img-fluid"></span>
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-card">
+            <img src="images/ltsolutions-portal.svg" alt="LT Solutions Portal" class="portfolio-image" style="object-fit: cover;">
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">LT Solutions - Portal Corporativo</h3>
+              <p class="portfolio-description">
+                Portal institucional e comercial desenvolvido com Angular e .NET. Sistema completo com gestão de conteúdo, 
+                apresentação de serviços e integração com sistemas internos.
+              </p>
+              <a href="https://ltsolutions.com.br" target="_blank" class="portfolio-link">
+                Ver Projeto <span>→</span>
+              </a>
             </div>
-            <h3 class="gsap-reveal-hero">Performance boosting</h3>
-            <p class="gsap-reveal-hero">De longe o ponto que mais me considero chato, levando ao time com desenhos ou
-              sendo criterioso nos code-reviews.</p>
-          </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="images/svg/dotnet.svg" alt="Image" class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">.NET</h3>
-            <p class="gsap-reveal-hero">A tecnologia que domino, tendo trabalhado dos legados até o mais recente (.NET 8
-              até o dia de hoje), caminhando para me tornar especialista</p>
           </div>
         </div>
 
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="images/svg/angular.svg" alt="Image" class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Angular</h3>
-            <p class="gsap-reveal-hero">De todos os frameworks front-end que trabalhei, o que mais domino é o Angular,
-              tendo atuado em diversas arquiteturas de componentes.</p>
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-card">
+            <img src="images/quick-quote.svg" alt="Quick-Quote" class="portfolio-image" style="object-fit: cover;">
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">Quick-Quote</h3>
+              <p class="portfolio-description">
+                Plataforma gratuita para gerar orçamentos profissionais em segundos. Crie, salve e envie orçamentos online 
+                com aparência profissional, ideal para autônomos e pequenos negócios.
+              </p>
+              <a href="https://documentos.ltsolutions.com.br" target="_blank" class="portfolio-link">
+                Ver Projeto <span>→</span>
+              </a>
+              </div>
+          </div>
+          </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-card">
+            <img src="images/gpt.png" alt="IA Code Review" class="portfolio-image">
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">IA Code Review Issuer</h3>
+              <p class="portfolio-description">
+                Ferramenta de code review automatizado utilizando inteligência artificial para análise 
+                de código e sugestões de melhorias.
+              </p>
+              <a href="https://github.com/gabrielvlourencao/ia_code_analysis_issues" target="_blank" class="portfolio-link">
+                Ver Projeto <span>→</span>
+              </a>
+              </div>
           </div>
         </div>
-
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="images/svg/service-icon-1.svg" alt="Image" class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Web Design</h3>
-            <p class="gsap-reveal-hero">Trabalho com diversos frameworks front-end, mas tambem planejo meu Design System
-              utilizando plataformas como Figma e Storybook</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="images/svg/talk.svg" alt="Image" class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Liderança e comunicação</h3>
-            <p class="gsap-reveal-hero">Sendo Tech Lead, tenho como ponto forte a minha comunicação, com o time e
-              negócio, de forma clara e bem articulada, tocando 1:1s e alguma sessões de dojo com o time.</p>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-          <div class="service text-center">
-            <div class="gsap-reveal-hero mb-3">
-              <span class="icon-service"><img src="images/svg/service-icon-1.svg" alt="Image" class="img-fluid"></span>
-            </div>
-            <h3 class="gsap-reveal-hero">Desenhos e planejamentos</h3>
-            <p class="gsap-reveal-hero">Desenhando a solução em niveis altos e baixos e sendo responsavel pela
-              documentação técnica de novas implementações</p>
-          </div>
-        </div>
-
       </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Habilidades</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Tecnologias e competências que domino
+      </p>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="images/svg/dotnet.svg" alt=".NET">
+            </div>
+            <h3 class="skill-title">.NET</h3>
+            <p class="skill-description">
+              A tecnologia que domino, tendo trabalhado dos legados até o mais recente (.NET 8), 
+              caminhando para me tornar especialista.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="images/svg/angular.svg" alt="Angular">
+            </div>
+            <h3 class="skill-title">Angular</h3>
+            <p class="skill-description">
+              De todos os frameworks front-end que trabalhei, o que mais domino é o Angular, 
+              tendo atuado em diversas arquiteturas de componentes.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="images/svg/service-icon-5.svg" alt="Performance">
+            </div>
+            <h3 class="skill-title">Performance</h3>
+            <p class="skill-description">
+              De longe o ponto que mais me considero criterioso, levando ao time com desenhos 
+              ou sendo criterioso nos code-reviews.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="images/svg/service-icon-1.svg" alt="Web Design">
+            </div>
+            <h3 class="skill-title">Web Design</h3>
+            <p class="skill-description">
+              Trabalho com diversos frameworks front-end, mas também planejo meu Design System 
+              utilizando plataformas como Figma e Storybook.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="images/svg/talk.svg" alt="Liderança">
+            </div>
+            <h3 class="skill-title">Liderança</h3>
+            <p class="skill-description">
+              Sendo Tech Lead, tenho como ponto forte a minha comunicação, com o time e negócio, 
+              de forma clara e bem articulada, tocando 1:1s e sessões de dojo.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="images/svg/service-icon-1.svg" alt="Arquitetura">
+            </div>
+            <h3 class="skill-title">Arquitetura</h3>
+            <p class="skill-description">
+              Desenhando a solução em níveis altos e baixos e sendo responsável pela 
+              documentação técnica de novas implementações.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Experiências</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Empresas onde já trabalhei e contribuí
+      </p>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="experience-card">
+            <img src="images/raizen.png" alt="Raizen" class="experience-logo">
+            <h3 class="experience-title">Raizen</h3>
+            <p class="experience-role">Senior Software Engineer | Tech Lead</p>
     </div>
   </div>
 
-  <div class="untree_co-section pb-0" id="home-section">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-md-7">
-          <h1 class="heading gsap-reveal-hero mb-3"><strong>Algumas experiências<span class="text-primary"></h1>
-          <h2 class="subheading gsap-reveal-hero mb-4">
-            Empresas onde já trabalhei
-          </h2>
+        <div class="col-12 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="experience-card">
+            <img src="images/Globant_.jpg" alt="Globant" class="experience-logo">
+            <h3 class="experience-title">Globant</h3>
+            <p class="experience-role">Salesforce Developer</p>
+          </div>
+          </div>
+
+        <div class="col-12 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="experience-card">
+            <img src="images/tcs.png" alt="TCS" class="experience-logo">
+            <h3 class="experience-title">Tata Consultancy Services</h3>
+            <p class="experience-role">Software Engineer</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="experience-card">
+            <img src="images/tid.jpg" alt="TID" class="experience-logo">
+            <h3 class="experience-title">TID Software</h3>
+            <p class="experience-role">Software Developer</p>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
+  </section>
 
-
-  <div class="untree_co-section untree_co-section-4 pb-0" id="home-section">
+  <!-- Footer -->
+  <footer id="contact" class="footer">
     <div class="container">
-
-
-      <div class="relative">
-        <div class="loader-portfolio-wrap">
-          <div class="loader-portfolio"></div>
-        </div>
-      </div>
-      <div id="portfolio-single-holder"></div>
-
-      <div class="portfolio-wrapper">
-
-        <div id="posts" class="row">
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a class="portfolio-item isotope-item gsap-reveal-img" data-id="1">
-              <div class="overlay">
-                <div class="portfolio-item-content">
-                  <h3>Tid Software Sistemas Especificos</h3>
-                  <p>Software Developer</p>
-                </div>
-              </div>
-              <img src="images/tid.jpg" class="lazyload  img-fluid" alt="Images" />
-            </a>
-          </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a class="portfolio-item isotope-item gsap-reveal-img" data-id="2">
-              <div class="overlay">
-                <div class="portfolio-item-content">
-                  <h3>Tata Consultancy Services</h3>
-                  <p>Software Engineer</p>
-                </div>
-              </div>
-              <img src="images/tcs.png" class="lazyload  img-fluid" alt="Images" />
-            </a>
-          </div>
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a class="portfolio-item isotope-item gsap-reveal-img" data-id="3">
-              <div class="overlay">
-                <div class="portfolio-item-content">
-                  <h3>Globant</h3>
-                  <p>Salesforce Developer</p>
-                </div>
-              </div>
-              <img src="images/Globant_.jpg" class="lazyload  img-fluid" alt="Images" />
-            </a>
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a class="portfolio-item isotope-item gsap-reveal-img" data-id="1">
-              <div class="overlay">
-                <div class="portfolio-item-content">
-                  <h3>Raizen</h3>
-                  <p>Senior Software Engineer | Tech Lead</p>
-                </div>
-              </div>
-              <img src="images/raizen.png" class="lazyload  img-fluid" alt="Images" />
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-
-      <!-- </div>
-        </div> -->
-    </div>
-  </div>
-
-  <div class="site-footer" id="footer-section">
-    <div class="container">
-
       <div class="row text-center">
         <div class="col-lg-12">
-          <div class="widget">
-            <h3>Contatos</h3>
-            <ul class="list-unstyled links mb-4">
-              <li><a href="https://api.whatsapp.com/send?phone=19999981989">+55(19) 99998-1989</a></li>
-              <li><a href="gabriel.vlourencao@hotmail.com">gabriel.vlourencao@hotmail.com</a></li>
+          <h3>Entre em Contato</h3>
+          <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">
+            Vamos conversar sobre seu próximo projeto
+          </p>
+          <ul class="list-unstyled" style="margin-bottom: 2rem;">
+            <li style="margin-bottom: 0.75rem;">
+              <a href="https://api.whatsapp.com/send?phone=19999981989" target="_blank" style="font-size: 1.1rem;">
+                +55 (19) 99998-1989
+              </a>
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <a href="mailto:gabriel.vlourencao@hotmail.com" style="font-size: 1.1rem;">
+                gabriel.vlourencao@hotmail.com
+              </a>
+            </li>
             </ul>
-
-            <h3>Connect</h3>
-            <ul class="list-unstyled social">
-              <li><a href="https://www.linkedin.com/in/gabriel-louren%C3%A7%C3%A3o/"><span
-                    class="icon-linkedin"></span></a></li>
-            </ul>
-
-          </div> <!-- /.widget -->
-        </div> <!-- /.col-lg-3 -->
-
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
-  </div> <!-- /.site-footer -->
-
-  <div id="overlayer"></div>
-  <div class="loader">
-    <div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/gabriel-louren%C3%A7%C3%A3o/" target="_blank">
+              <span class="icon-linkedin" style="font-size: 1.5rem;"></span>
+            </a>
+          </div>
+          <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.6);">
+            © 2024 Gabriel Lourenção. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
+  </footer>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/aos.js"></script>
-  <script src="js/wave-animate.js"></script>
-  <script src="js/circle-progress.js"></script>
-  <script src="js/imagesloaded.pkgd.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/TweenMax.min.js"></script>
-  <script src="js/ScrollMagic.min.js"></script>
-  <script src="js/scrollmagic.animation.gsap.min.js"></script>
-
-
   <script src="js/custom.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+
+    // Navbar scroll effect
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 50) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+    });
+
+    // Smooth scroll
+    $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top - 80
+        }, 1000);
+      }
+    });
+  </script>
 
 </body>
 

@@ -1,0 +1,70 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#fee2e2;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Header -->
+  <rect y="0" width="800" height="80" fill="#ffffff"/>
+  <line x1="0" y1="80" x2="800" y2="80" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Logo/Title -->
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0f172a">Quick Quote (QQ)</text>
+  
+  <!-- Sun icon (dark mode toggle) -->
+  <circle cx="750" cy="40" r="12" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="750" cy="40" r="8" fill="#ffffff"/>
+  
+  <!-- Start button -->
+  <rect x="650" y="25" width="80" height="30" fill="#dc2626" rx="6"/>
+  <text x="690" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">Comece já</text>
+  
+  <!-- Free Platform Tag -->
+  <rect x="300" y="120" width="200" height="35" fill="#dc2626" rx="18"/>
+  <circle cx="320" cy="137" r="3" fill="#ffffff"/>
+  <text x="340" y="142" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Plataforma Gratuita</text>
+  
+  <!-- Main Headline -->
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#0f172a" text-anchor="middle">Gere Orçamentos</text>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#0f172a" text-anchor="middle">Profissionais</text>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#dc2626" text-anchor="middle">em Segundos</text>
+  
+  <!-- Description -->
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="16" fill="#64748b" text-anchor="middle">Crie, salve e envie orçamentos online com aparência profissional</text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="16" fill="#64748b" text-anchor="middle">— sem precisar de planilhas ou softwares complexos.</text>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="16" fill="#64748b" text-anchor="middle">Ideal para autônomos e pequenos negócios.</text>
+  
+  <!-- Main CTA Button -->
+  <rect x="250" y="420" width="300" height="55" fill="#dc2626" rx="8"/>
+  <text x="400" y="455" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">Acessar o Aplicativo</text>
+  <polygon points="520,450 535,455 520,460" fill="#ffffff"/>
+  
+  <!-- Features -->
+  <g transform="translate(200, 500)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#dc2626" text-anchor="middle">100%</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Gratuito</text>
+  </g>
+  
+  <g transform="translate(400, 500)">
+    <!-- Lightning icon -->
+    <path d="M -8 -15 L 0 -25 L 8 -15 L 4 -15 L 6 5 L -6 5 L -4 -15 Z" fill="#dc2626"/>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Rápido</text>
+  </g>
+  
+  <g transform="translate(600, 500)">
+    <!-- Document/PDF icon -->
+    <rect x="-12" y="-18" width="24" height="30" fill="#dc2626" rx="2"/>
+    <rect x="-8" y="-14" width="16" height="4" fill="#ffffff"/>
+    <rect x="-8" y="-8" width="12" height="2" fill="#ffffff"/>
+    <rect x="-8" y="-4" width="16" height="2" fill="#ffffff"/>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">PDFs Profissionais</text>
+  </g>
+  
+  <!-- Bottom Section -->
+  <text x="400" y="570" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="middle">Por que usar o Quick Quote (QQ)?</text>
+</svg>
+
