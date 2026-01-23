@@ -328,6 +328,20 @@
       color: var(--primary-dark);
     }
 
+    .portfolio-badge {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+      box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+    }
+
     /* Skills Section */
     .skills-section {
       background: var(--bg-white);
@@ -813,15 +827,32 @@
           <div class="portfolio-card">
             <img src="images/gpt.png" alt="IA Code Review" class="portfolio-image">
             <div class="portfolio-content">
+              <span class="portfolio-badge">Depreciado</span>
               <h3 class="portfolio-title">IA Code Review Issuer</h3>
               <p class="portfolio-description">
                 Ferramenta de code review automatizado utilizando inteligência artificial para análise 
-                de código e sugestões de melhorias.
+                de código e sugestões de melhorias. Criado quando a IA ainda não tinha ferramentas nativas para tais funcionalidades.
               </p>
               <a href="https://github.com/gabrielvlourencao/ia_code_analysis_issues" target="_blank" class="portfolio-link">
                 Ver Projeto <span>→</span>
               </a>
               </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="portfolio-card">
+            <img src="images/kairos.png" alt="Kairos - Gestão simplificada" class="portfolio-image" style="object-fit: cover;">
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">Kairos - Gestão simplificada</h3>
+              <p class="portfolio-description">
+                Sistema completo de gestão que reúne pedidos, entregas e retiradas em um único lugar. 
+                Ideal para autônomos e microempreendedores, com dashboard, métricas, relatórios e controle de despesas.
+              </p>
+              <a href="https://kairos.ltsolutions.com.br" target="_blank" class="portfolio-link">
+                Ver Projeto <span>→</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
