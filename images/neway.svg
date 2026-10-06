@@ -1,0 +1,45 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#16301f"/>
+      <stop offset="70%" stop-color="#0c1210"/>
+      <stop offset="100%" stop-color="#070a09"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <rect y="0" width="800" height="64" fill="#0b0f0d"/>
+  <line x1="0" y1="64" x2="800" y2="64" stroke="#1c2a22" stroke-width="1"/>
+  <text x="36" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#3d9a5c">Neway</text>
+  <text x="250" y="40" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Home</text>
+  <text x="330" y="40" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Soluções</text>
+  <text x="430" y="40" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Sobre</text>
+  <text x="510" y="40" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Contato</text>
+  <rect x="600" y="18" width="164" height="30" rx="8" fill="#22c55e"/>
+  <text x="682" y="38" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#052e16" text-anchor="middle">Portal do cliente</text>
+
+  <text x="400" y="175" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="6" fill="#2f7a48" text-anchor="middle">START THE NEW</text>
+  <text x="400" y="230" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f8fafc" text-anchor="middle">Soluções digitais</text>
+  <text x="400" y="274" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f8fafc" text-anchor="middle">sob medida.</text>
+  <text x="400" y="318" font-family="Arial, sans-serif" font-size="15" fill="#94a3b8" text-anchor="middle">IA, automação e software alinhados ao seu negócio</text>
+
+  <rect x="248" y="350" width="150" height="42" rx="10" fill="#22c55e"/>
+  <text x="323" y="376" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#052e16" text-anchor="middle">Fale conosco</text>
+  <rect x="412" y="350" width="140" height="42" rx="10" fill="#111816" stroke="#24332b" stroke-width="1"/>
+  <text x="482" y="376" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#d1d5db" text-anchor="middle">Soluções</text>
+
+  <rect x="70" y="440" width="200" height="110" rx="14" fill="#111816" stroke="#1f2e26"/>
+  <text x="90" y="478" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#3d9a5c">IA SOB MEDIDA</text>
+  <text x="90" y="508" font-family="Arial, sans-serif" font-size="14" fill="#e5e7eb">Fluxos inteligentes</text>
+  <text x="90" y="528" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">para o dia a dia</text>
+
+  <rect x="300" y="440" width="200" height="110" rx="14" fill="#111816" stroke="#1f2e26"/>
+  <text x="320" y="490" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#f8fafc">Automação</text>
+  <text x="320" y="516" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">Menos manual,</text>
+  <text x="320" y="534" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">mais previsível</text>
+
+  <rect x="530" y="440" width="200" height="110" rx="14" fill="#111816" stroke="#1f2e26"/>
+  <text x="550" y="490" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#f8fafc">Sob medida</text>
+  <text x="550" y="516" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">Do MVP à</text>
+  <text x="550" y="534" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">operação</text>
+</svg>
